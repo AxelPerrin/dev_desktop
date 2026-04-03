@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:GestionnaireLivres.MAUI.ViewModels"
+             xmlns:conv="clr-namespace:GestionnaireLivres.MAUI.Converters"
+             x:Class="GestionnaireLivres.MAUI.MainPage"
+             Title="Gestionnaire de Livres">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <conv:GenreToColorConverter x:Key="GenreToColor" />
+        <conv:BoolToLuConverter x:Key="BoolToLu" />
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="Auto,*" Padding="15" RowSpacing="10" BackgroundColor="#F8F9FA">
+
+        <Border Grid.Row="0" StrokeShape="RoundRectangle 8" Stroke="#E0E0E0"
+                BackgroundColor="White" Padding="15">
+            <HorizontalStackLayout Spacing="12" VerticalOptions="Center">
+                <Label Text="📚 Livres lus uniquement" FontSize="16" VerticalOptions="Center" />
+                <Switch IsToggled="{Binding AfficherLusUniquement}" VerticalOptions="Center"
+                        OnColor="#22C55E" />
+            </HorizontalStackLayout>
+        </Border>
+
+        <CollectionView Grid.Row="1"
+                        ItemsSource="{Binding LivresFiltres}"
+                        SelectedItem="{Binding LivreSelectionne, Mode=TwoWay}"
+                        SelectionMode="Single">
+
+            <CollectionView.Header>
+                <Label Text="{Binding LivresFiltres.Count, StringFormat='{0} livre(s) affiché(s)'}"
+                       FontSize="13" TextColor="#6B7280" Margin="5,0,0,8" />
+            </CollectionView.Header>
+
+            <CollectionView.EmptyView>
+                <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                    <Label Text="Aucun livre à afficher" FontSize="18" TextColor="#9CA3AF"
+                           HorizontalTextAlignment="Center" />
+                </StackLayout>
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border StrokeShape="RoundRectangle 10" Stroke="#E5E7EB"
+                            BackgroundColor="White" Padding="15" Margin="0,0,0,8">
+                        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto,Auto" ColumnSpacing="10">
+
+                            <Label Grid.Row="0" Grid.Column="0"
+                                   Text="{Binding Titre}"
+                                   FontSize="17" FontAttributes="Bold" TextColor="#1F2937"
+                                   LineBreakMode="TailTruncation" />
+
+                            <Label Grid.Row="1" Grid.Column="0"
+                                   FontSize="14" TextColor="#6B7280">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding Auteur}" />
+                                        <Span Text=" — " />
+                                        <Span Text="{Binding Annee}" />
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+
+                            <Label Grid.Row="2" Grid.Column="0"
+                                   FontSize="13" TextColor="#6B7280"
+                                   Text="{Binding Lu, Converter={StaticResource BoolToLu}}" />
+
+                            <Border Grid.Row="0" Grid.Column="1" Grid.RowSpan="3"
+                                    StrokeShape="RoundRectangle 12"
+                                    Stroke="Transparent"
+                                    BackgroundColor="{Binding Genre, Converter={StaticResource GenreToColor}}"
+                                    Padding="12,6"
+                                    VerticalOptions="Center">
+                                <Label Text="{Binding Genre}" FontSize="13"
+                                       TextColor="White" FontAttributes="Bold"
+                                       HorizontalTextAlignment="Center" />
+                            </Border>
+
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

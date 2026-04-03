@@ -1,0 +1,15 @@
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\bin\Debug\net8.0-windows\GestionnaireLivres.WinForms.exe
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\bin\Debug\net8.0-windows\GestionnaireLivres.WinForms.deps.json
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\bin\Debug\net8.0-windows\GestionnaireLivres.WinForms.runtimeconfig.json
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\bin\Debug\net8.0-windows\GestionnaireLivres.WinForms.dll
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\bin\Debug\net8.0-windows\GestionnaireLivres.WinForms.pdb
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.AssemblyInfoInputs.cache
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.AssemblyInfo.cs
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.csproj.CoreCompileInputs.cache
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.sourcelink.json
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.dll
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\refint\GestionnaireLivres.WinForms.dll
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.pdb
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\GestionnaireLivres.WinForms.genruntimeconfig.cache
+C:\Users\zlata\Documents\GitHub\dev_desktop\GestionnaireLivres.WinForms\obj\Debug\net8.0-windows\ref\GestionnaireLivres.WinForms.dll
